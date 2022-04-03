@@ -1,0 +1,64 @@
+----------------------------------------------------------------
+Sun Apr 03 15:14:10 CEST 2022:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz a816c00e-017f-ef8f-c352-00000f000000
+für Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+Geladen aus file:/C:/Dev/JavaStudium/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.1+12-39
+user.dir=C:\Dev\JavaStudium\de.simon.minimail
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Apr 03 15:14:10 CEST 2022:
+Instanz a816c00e-017f-ef8f-c352-00000f000000 im Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa wird heruntergefahren
+----------------------------------------------------------------
+Sun Apr 03 15:15:28 CEST 2022:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz 08264012-017f-ef8f-c352-00000f000000
+für Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+Geladen aus file:/C:/Dev/JavaStudium/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.1+12-39
+user.dir=C:\Dev\JavaStudium\de.simon.minimail
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Apr 03 15:15:28 CEST 2022:
+Instanz 08264012-017f-ef8f-c352-00000f000000 im Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa wird heruntergefahren
+----------------------------------------------------------------
+Sun Apr 03 15:15:32 CEST 2022:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz 6839c016-017f-ef8f-c352-00000f000000
+für Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+Geladen aus file:/C:/Dev/JavaStudium/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.1+12-39
+user.dir=C:\Dev\JavaStudium\de.simon.minimail
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Apr 03 15:15:32 CEST 2022:
+Instanz 6839c016-017f-ef8f-c352-00000f000000 im Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa wird heruntergefahren
+----------------------------------------------------------------
+Sun Apr 03 15:15:46 CEST 2022:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): Instanz c851401a-017f-ef8f-c352-00000f000000
+für Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa
+Geladen aus file:/C:/Dev/JavaStudium/db-derby-10.15.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.1+12-39
+user.dir=C:\Dev\JavaStudium\de.simon.minimail
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Apr 03 15:15:46 CEST 2022:
+Instanz c851401a-017f-ef8f-c352-00000f000000 im Datenbankverzeichnis C:\Dev\JavaStudium\de.simon.minimail\mailDB mit Class Loader jdk.internal.loader.ClassLoaders$AppClassLoader@1d44bcfa wird heruntergefahren
