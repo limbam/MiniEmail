@@ -1,4 +1,4 @@
-package miniMail;
+package de.simon.miniMail;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -26,7 +26,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-public class NeueNachricht extends JDialog {
+public class Weiterleiten extends JDialog {
     //	für die Eingabefelder
     private JTextField empfaenger, betreff;
     private JTextArea inhalt;
@@ -49,9 +49,9 @@ public class NeueNachricht extends JDialog {
     }
 
     //	der Konstruktor
-    public NeueNachricht(JFrame parent, boolean modal) {
+    public Weiterleiten(JFrame parent, boolean modal) {
         super(parent, modal);
-        setTitle("Neue Nachricht");
+        setTitle("Weiterleiten");
 //		die Oberfläche erstellen
         initGui();
 
@@ -67,19 +67,28 @@ public class NeueNachricht extends JDialog {
         oben.add(new JLabel("Empfänger:"));
         empfaenger = new JTextField();
         oben.add(empfaenger);
+//		Betreff label
         oben.add(new JLabel("Betreff:"));
         betreff = new JTextField();
         oben.add(betreff);
+//		den Betreff setzen und für weitere Eingaben Sperren
+        betreff.setText("WG: " + Empfangen.reBetreff);
+        betreff.setEditable(false);
+
+//		Inhalt textarea
         add(oben, BorderLayout.NORTH);
         inhalt = new JTextArea();
 //		den Zeilenumbruch aktivieren
         inhalt.setLineWrap(true);
         inhalt.setWrapStyleWord(true);
+
+//		den Inhalt mit einer Kennzeichnung setzen
+        inhalt.setText("\n----- Text der weitergeleiteten Nachricht ----\n" + Empfangen.reInhalt);
+
 //		das Feld setzen wir in ein Scrollpane
         JScrollPane scroll = new JScrollPane(inhalt);
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         add(scroll);
-
         JPanel unten = new JPanel();
 //		die Schaltflächen
         ok = new JButton("Senden");
@@ -141,7 +150,7 @@ public class NeueNachricht extends JDialog {
     }
 
     private void nachrichtVerschicken(Session sitzung) {
-//		LoginName...verwenden wir auch als "Absender"
+//		LoginName verwenden wir auch als "Absender"
         String absender = LoginDialog.getLoginName();
 
         try {

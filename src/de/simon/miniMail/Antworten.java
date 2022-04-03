@@ -1,32 +1,17 @@
-package miniMail;
+package de.simon.miniMail;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
+import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Properties;
 
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
-public class Weiterleiten extends JDialog {
+public class Antworten extends JDialog {
     //	für die Eingabefelder
     private JTextField empfaenger, betreff;
     private JTextArea inhalt;
@@ -48,10 +33,10 @@ public class Weiterleiten extends JDialog {
         }
     }
 
-    //	der Konstruktor
-    public Weiterleiten(JFrame parent, boolean modal) {
+    // der Konstruktor
+    public Antworten(JFrame parent, boolean modal) {
         super(parent, modal);
-        setTitle("Weiterleiten");
+        setTitle("Antworten");
 //		die Oberfläche erstellen
         initGui();
 
@@ -67,12 +52,17 @@ public class Weiterleiten extends JDialog {
         oben.add(new JLabel("Empfänger:"));
         empfaenger = new JTextField();
         oben.add(empfaenger);
+
+//		den Empfänger setzen und für weitere Eingaben Sperren
+        empfaenger.setText(Empfangen.absender);
+        empfaenger.setEditable(false);
+
 //		Betreff label
         oben.add(new JLabel("Betreff:"));
         betreff = new JTextField();
         oben.add(betreff);
 //		den Betreff setzen und für weitere Eingaben Sperren
-        betreff.setText("WG: " + Empfangen.reBetreff);
+        betreff.setText("AW: " + Empfangen.reBetreff);
         betreff.setEditable(false);
 
 //		Inhalt textarea
@@ -81,14 +71,14 @@ public class Weiterleiten extends JDialog {
 //		den Zeilenumbruch aktivieren
         inhalt.setLineWrap(true);
         inhalt.setWrapStyleWord(true);
-
 //		den Inhalt mit einer Kennzeichnung setzen
-        inhalt.setText("\n----- Text der weitergeleiteten Nachricht ----\n" + Empfangen.reInhalt);
+        inhalt.setText("\n\n----- Text der ursprünglichen Nachricht ----\n" + Empfangen.reInhalt);
 
 //		das Feld setzen wir in ein Scrollpane
         JScrollPane scroll = new JScrollPane(inhalt);
         scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         add(scroll);
+
         JPanel unten = new JPanel();
 //		die Schaltflächen
         ok = new JButton("Senden");
@@ -109,7 +99,7 @@ public class Weiterleiten extends JDialog {
         setVisible(true);
     }
 
-    //	die Methode verschickt die Nachricht
+    //     	die Methode verschickt die Nachricht
     private void senden() {
 //		für die Sitzung
         Session sitzung;
@@ -150,7 +140,6 @@ public class Weiterleiten extends JDialog {
     }
 
     private void nachrichtVerschicken(Session sitzung) {
-//		LoginName verwenden wir auch als "Absender"
         String absender = LoginDialog.getLoginName();
 
         try {

@@ -1,4 +1,4 @@
-package miniMail;
+package de.simon.miniMail;
 
 import javax.mail.*;
 import javax.swing.*;

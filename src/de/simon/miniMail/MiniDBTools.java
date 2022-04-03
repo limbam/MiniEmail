@@ -1,7 +1,8 @@
-package miniMail;
+package de.simon.miniMail;
 
 //die Klasse stellt statische Methoden zur Arbeit mit Datenbanken
 //zur Verfügung
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

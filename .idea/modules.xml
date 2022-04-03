@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/de.simon.minimail.iml" filepath="$PROJECT_DIR$/de.simon.minimail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MiniMail.iml" filepath="$PROJECT_DIR$/MiniMail.iml" />
     </modules>
   </component>
 </project>

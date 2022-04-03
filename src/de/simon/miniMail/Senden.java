@@ -1,4 +1,4 @@
-package miniMail;
+package de.simon.miniMail;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -86,7 +86,7 @@ public class Senden extends JFrame {
     //	zum Erstellen der Tabelle
     private void tabelleErstellen() {
 //		für die Spaltenbezeichner
-        String[] spaltenNamen = { "ID", "Empfänger", "Betreff", "Text" };
+        String[] spaltenNamen = {"ID", "Empfänger", "Betreff", "Text"};
 
 //		ein neues Standardmodell erstellen
         modell = new DefaultTableModel();
@@ -155,7 +155,7 @@ public class Senden extends JFrame {
 
 //				die Zeile zum Modell hinzufügen
 //				dazu benutzen wir ein Array vom Typ Object
-                modell.addRow(new Object[] { ID, empfaenger, betreff, inhalt });
+                modell.addRow(new Object[]{ID, empfaenger, betreff, inhalt});
             }
 //			die Verbindungen wieder schließen und trennen
             ergebnisMenge.close();

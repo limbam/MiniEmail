@@ -1,4 +1,4 @@
-package datenbankStartUtil;
+package de.simon.datenbankStartUtil;
 
 import javax.swing.*;
 import java.awt.*;
